@@ -1,0 +1,48 @@
+# Binaries
+*.exe
+*.out
+
+# Go build artifacts
+/bin/
+/pkg/
+
+# IDE and editor-specific files
+.idea/
+.vscode/
+
+# System and temporary files
+Thumbs.db
+.DS_Store
+/tmp/
+/temp/
+
+# Dependency directories (if using vendoring)
+/vendor/
+
+# Logs and runtime data
+/log/
+/logs/
+*.log
+
+# Environment-specific files
+.env
+.env.*
+
+# Configuration files
+*.yaml
+*.yml
+*.toml
+
+# Compiled files or directories from package managers
+/node_modules/
+/dist/
+/build/
+
+# Generated files
+/generated/
+*.gen.go
+
+# Test and coverage results
+/test_results/
+*.cover
+*.cov
