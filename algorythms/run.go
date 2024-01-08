@@ -6,10 +6,9 @@ import (
 )
 
 func main() {
-	numbers := []int{2, 7, 15, 11}
-	target := 9
+	target := 4554
 
-	fmt.Println(two_sum_pointers(numbers, target))
+	fmt.Println(is_palindrome(target))
 }
 
 // recursive algorythm, getting remainder and starting same functio with q and remainder
@@ -107,3 +106,24 @@ func two_sum_pointers(nums []int, target int) []int {
 	return []int{}
 }
 
+// 4554
+func is_palindrome(x int) bool {
+	if (x < 0) { return false }
+
+	if (x < 10) { return true }
+
+	if (x % 10 == 0) { return false }
+
+	part := 0
+
+	for x > 0 {
+		part = part * 10 + x % 10
+		x /= 10
+
+		if x == part || part == x / 10 {
+			return true
+		}
+	}
+
+	return false
+}
