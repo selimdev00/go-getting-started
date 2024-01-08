@@ -26,11 +26,15 @@ func euclidean_recursive(p int, q int) int {
 
 // looping algorythm, without recursive
 func euclidean_loop(p int, q int) int {
-	r := p % q
+	var r, s int
 
-	for r > 0 {
-		r = q % r
+	r = p % q
+	s = r 
+
+	for s > 0 {
+		s = q % r
+		if (s != 0) { r = s }
 	}
 	
-	return r
+	if (r == 0) { return q } else { return r }
 }
